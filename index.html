@@ -2,7 +2,9 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <style media="screen"> body{margin:0; padding:0;}</style>
+    <style media="screen"> body{margin:0; padding:0;}
+      .absolute{ position: absolute; color: #eee; left: 20px; top: 10px;}
+    </style>
     <title>Heart-fireworks </title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
     <script src="sketch.js" charset="utf-8"></script>
@@ -10,6 +12,8 @@
     <script src="particles.js" charset="utf-8"></script>
   </head>
   <body>
-
+    <label class="absolute">
+      <input type="checkbox" id="cbox" value=""> Randomize
+    </label>
   </body>
 </html>

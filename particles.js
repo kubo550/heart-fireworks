@@ -1,11 +1,12 @@
 class Particle {
-  constructor(pos, target, col, mforce, mspeed) {
+  constructor(pos, target, h, mforce, mspeed, r) {
     this.pos = pos.copy()
     this.vel = createVector()
     this.acc = createVector()
     this.target = target.copy()
-    this.col = col
-    this.r = 10
+    this.h = h
+    this.s = random(40, 70)
+    this.r = r
     this.maxForce = mforce || 0.3
     this.maxSpeed = mspeed || 4
     this.lifespan = 255
@@ -35,8 +36,7 @@ class Particle {
   draw(){
     push()
     noStroke()
-    this.col.setAlpha(this.lifespan)
-    fill(this.col)
+    fill(this.h, this.s, this.s, this.lifespan/255)
     ellipse(this.pos.x, this.pos.y, this.r)
     pop()
   }
